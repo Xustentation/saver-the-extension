@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Saver The Guardian",
+  "version": "1.0.0",
+  "permissions": ["scripting", "activeTab"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
